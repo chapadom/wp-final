@@ -119,6 +119,7 @@ button {
   margin-bottom:15px
 }
 
+/* change color of About button when hovering */
 .openbtn:hover {
-  background-color: #444;
+  background-color: #8dd3c7;
 }
