@@ -134,3 +134,34 @@ map.getSource('highlight-feature').setData({
     }
   })
 })
+
+
+// add neighboor boundaries as determined by neighborhood tabulation areas (NTAs)
+map.addSource('nta', {
+  type: 'geojson',
+  data: './data/nta.geojson',
+});
+
+// add outline of NTAs
+map.addLayer({
+  id: 'nta-outline',
+  type: 'fill',
+  source:'nta',
+  paint: {
+    "fill-color": 'black',
+    "fill-opacity": .5,
+    "fill-outline-color": "#000000"
+  },
+});
+
+/* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("about").style.width = "350px";
+  document.getElementById("about").style.marginRight = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("about").style.width = "0";
+  document.getElementById("about").style.marginRight= "0";
+}

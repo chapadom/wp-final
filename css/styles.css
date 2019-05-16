@@ -62,3 +62,63 @@ button {
   float: left;
   margin-right: 10px;
 }
+
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 500px; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 20px;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: right 0.5s ease-in-out; /* 0.5 second transition effect to slide in the sidepanel */
+  border-radius: 11px;
+  box-shadow: 1px 1px 7px #525252;
+  margin-bottom:15px;
+  margin-left: 950px
+}
+
+/* The sidepanel close out x link */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color
+-- for the close out x marker */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 15px;
+  border: 1px;
+  border-radius: 11px;
+  box-shadow: 1px 1px 7px #525252;
+  margin-bottom:15px
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
