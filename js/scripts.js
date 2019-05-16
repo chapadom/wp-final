@@ -69,12 +69,12 @@ paint: {
     }});
 
 // add an outline to the citibike points
-mapp.addLayer({
+map.addLayer({
   id:'citibike-outline',
   type: 'line',
   source: 'citibike',
   paint:{
-    'line-opacity': 1,
+    'line-opacity': 0.7,
     'line-color': 'gray',
     'line-opacity': {
       stops: [[14,0], [14.8,1]],
@@ -83,7 +83,7 @@ mapp.addLayer({
 });
 
 // add an empty data source, which we will use to highlight the lot the user is hovering over
-  map.addSource('highlight-feature', {
+map.addSource('highlight-feature', {
     type: 'geojson',
     data: {
       type: 'FeatureCollection',
@@ -92,7 +92,7 @@ mapp.addLayer({
   })
 
 // add a layer for the highlighted lot
-  map.addLayer({
+map.addLayer({
     id: 'highlight-line',
     type: 'line',
     source: 'highlight-feature',
@@ -121,8 +121,8 @@ map.on('mousemove', function (e) {
                     $('#t_rides').text(station.properties.t_rides);
                     $('#d_rides').text(station.properties.d_rides);
 
-// set this lot's polygon feature as the data for the highlight source
-map.getSource('highlight-feature').setData(lot.geometry);
+// set this station's feature as the data for the highlight source
+map.getSource('highlight-feature').setData(station.geometry);
     } else {
       map.getCanvas().style.cursor = 'default'; // make the cursor default
 
