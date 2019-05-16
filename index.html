@@ -1,46 +1,47 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>Furman Fun Day 2019</title>
-    <meta name="Web Mapping: Final Project" content="The HTML5 Herald">
-    <meta name="Mili Chapado" content="SitePoint">
+<head>
+  <meta charset="utf-8">
 
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-  </head>
+  <title>Furman Fun Day 2019</title>
+  <meta name="Web Mapping: Final Project" content="The HTML5 Herald">
+  <meta name="Mili Chapado" content="SitePoint">
 
-  <body>
-    <div id="mapContainer">
-      <div id="sidebar">
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
 
-        <div class="title-box">
-          <h3>CitiBike Ridership per Station:
-            <br>Average Daily Use*</h3>
-          </div>
+<body>
+  <div id="mapContainer">
+    <div id="sidebar">
 
-        <div class="info-box">
-          <h3>Hover over a station for location <br>& ridership info.</h3>
-          Station ID: <span id="station_id"></span><br/>
-          Location: <span id="station_name"></span><br/>
-          Total Use This Year: <span id="t_rides"></span><br>
-          Average Daily Use: <span id="d_rides"</span><br>
-        </div>
+      <div class="title-box">
+        <h3>CitiBike Ridership per Station:
+          <br>Average Daily Use*</h3>
+      </div>
 
-        <div class="info-box legend">
-          <h3>Average Daily Use*</h3>
-          <div id='station-legend' class='legend'>
+      <div class="info-box">
+        <h3>Hover over a station for location <br>& ridership info.</h3>
+        Station ID: <span id="station_id"></span><br />
+        Location: <span id="station_name"></span><br />
+        Total Use This Year: <span id="t_rides"></span><br>
+        Average Daily Use: <span id="d_rides" </span> <br>
+      </div>
+
+      <div class="info-box legend">
+        <h3>Average Daily Use*</h3>
+        <div id='station-legend' class='legend'>
           <div><span style='background-color: #fccde5'></span>Less than 50</div>
           <div><span style='background-color: #bebada'></span>51 to 300</div>
           <div><span style='background-color: #8dd3c7'></span>301 to 500</div>
           <div><span style='background-color: #fb8072'></span>More than 500</div>
-          </div>
-          *"Use" measures every time a bike was undocked and docked from a particular station
-          <br>(both to begin or end a ride)
-          <br><br>
-          <b>Source:</b> CitiBike, January - December 2018
+        </div>
+        *"Use" measures every time a bike was undocked and docked from a particular station
+        <br>(both to begin or end a ride)
+        <br><br>
+        <b>Source:</b> CitiBike, January - December 2018
       </div>
 
       <div class="info-box">
@@ -53,21 +54,30 @@
       </div>
 
       <div id="about" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-Write about citibike here.
-</div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-<button class="openbtn" onclick="openNav()">&#9776; About</button>
+        <h3>About this Map</h3>
+        <br>This map highlights CitiBike daily and annual ridership data across 750 stations in three
+        New York City boroughs serviced by Citi Bike. Data was sourced from CitiBike's website, from
+        January to December 2018, and aggregated at the station level for daily and annual ridership.
+        <br><br>
+        <h3>More on CitiBike</h3>
+        CitiBike is a privately owned public bicycle sharing system serving
+        the New York City boroughs of Manhattan, Queens, and Brooklyn,
+        as well Jersey City, New Jersey (not shown on this map).
+        <p><b>Launch Date:</b> May 27, 2013</p>
+        <p><b>Number of Stations:</b> 750 </p>
+        <p><b>Daily Ridership:</b> 62,000 (daily average, Oct. 2017)</p>
+      </div>
 
+      <button class="openbtn" onclick="openNav()">&#9776; Find Out More</button>
 
-</div>
     </div>
+  </div>
 
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>
