@@ -105,7 +105,8 @@ map.on('style.load', function() {
     type: 'circle',
     source: 'highlight-feature',
     paint: {
-      'circle-width': 3,
+      'circle-radius': 5,
+      'circle-outline': 5,
       'circle-opacity': 0.9,
       'circle-color': 'black',
     }
@@ -144,34 +145,16 @@ map.on('style.load', function() {
 })
 
 
-// NTA outline - not working, even with type "line"
 
-// add neighboor boundaries as determined by neighborhood tabulation areas (NTAs)
-map.addSource('nta', {
-  type: 'geojson',
-  data: './data/nta.geojson',
-});
+// "Find Out More" Pop Up Box
 
-// add outline of NTAs
-map.addLayer({
-  id: 'nta-outline',
-  type: 'fill',
-  source: 'nta',
-  paint: {
-    'fill-color': 'black',
-    'fill-outline-color': 'black'
-  }
-});
-
-// Sidebar
-
-/* Set the width of the sidebar to 250px (show it) */
+/* Set the width of the box to 250px (show it) */
 function openNav() {
   document.getElementById("about").style.width = "350px";
   document.getElementById("about").style.marginRight = "250px";
 }
 
-/* Set the width of the sidebar to 0 (hide it) */
+/* Set the width of the box to 0 (hide it) */
 function closeNav() {
   document.getElementById("about").style.width = "0";
   document.getElementById("about").style.marginRight = "0";

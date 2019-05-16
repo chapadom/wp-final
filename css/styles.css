@@ -56,9 +56,9 @@ button {
   border-radius: 5px;
 }
 
-/* the side/popup panel */
+/* the side popup panel */
 .sidepanel {
-  height: 500px;
+  height: 400px;
   /* Specify a height */
   width: 0;
   /* 0 width - change this with JavaScript */
@@ -71,19 +71,17 @@ button {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
-  transition: right 0.5s ease-in-out;
   /* 0.5 second transition effect to slide in the sidepanel */
+  transition: ease-in-out;
   border-radius: 11px;
   box-shadow: 1px 1px 7px #525252;
-  margin-bottom: 10px;
+  margin-bottom: 500px;
   margin-left: 1000px
 }
 
 /* the sidepanel close out x link */
 .sidepanel a {
-  padding: 8px 8px 8px 32px;
+  padding: 5px 5px 5px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -106,7 +104,7 @@ button {
   margin-left: 50px;
 }
 
-/* Style the button that is used to open the sidepanel */
+/* Style the button that is used to open the pop up box */
 .openbtn {
   font-size: 20px;
   position: fixed;
@@ -122,7 +120,7 @@ button {
   margin-bottom: 15px
 }
 
-/* change color of About button when hovering */
+/* change color of Find Out More button when hovering */
 .openbtn:hover {
   background-color: #8dd3c7;
 }
