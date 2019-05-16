@@ -136,23 +136,26 @@ map.getSource('highlight-feature').setData({
 })
 
 
+// NTA outline
+
 // add neighboor boundaries as determined by neighborhood tabulation areas (NTAs)
 map.addSource('nta', {
   type: 'geojson',
   data: './data/nta.geojson',
 });
 
-// add outline of NTAs
+// add outline of NTAs //not working, even with type "line"
 map.addLayer({
   id: 'nta-outline',
   type: 'fill',
-  source:'nta',
+  source: 'nta',
   paint: {
-    "fill-color": 'black',
-    "fill-opacity": .5,
-    "fill-outline-color": "#000000"
-  },
+    'fill-color': 'black',
+    'fill-outline-color': 'black'
+  }
 });
+
+// Sidebar
 
 /* Set the width of the sidebar to 250px (show it) */
 function openNav() {

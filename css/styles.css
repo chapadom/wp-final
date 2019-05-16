@@ -56,32 +56,24 @@ button {
   border-radius: 5px;
 }
 
-.legend-color-box {
-  height: 15px;
-  width: 15px;
-  float: left;
-  margin-right: 10px;
-}
-
-
-/* The sidepanel menu */
+/* the side/popup panel */
 .sidepanel {
   height: 500px; /* Specify a height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
-  top: 20px;
+  top: 100px;
   background-color: #fff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: right 0.5s ease-in-out; /* 0.5 second transition effect to slide in the sidepanel */
   border-radius: 11px;
   box-shadow: 1px 1px 7px #525252;
-  margin-bottom:15px;
-  margin-left: 950px
+  margin-bottom: 10px;
+  margin-left: 1000px
 }
 
-/* The sidepanel close out x link */
+/* the sidepanel close out x link */
 .sidepanel a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -109,6 +101,9 @@ button {
 /* Style the button that is used to open the sidepanel */
 .openbtn {
   font-size: 20px;
+  position: fixed;
+  top: 10px;
+  right: 50px;
   cursor: pointer;
   background-color: #ffffff;
   color: black;
@@ -122,4 +117,31 @@ button {
 /* change color of About button when hovering */
 .openbtn:hover {
   background-color: #8dd3c7;
+}
+
+
+/* legend style */
+.legend {
+background-color: #ffffff;
+color: black;
+border-radius: 11px;
+bottom: 20px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+padding: 15px 15px 10px;
+position: auto;
+right: 10px;
+z-index: 1;
+}
+
+.legend h4 {
+margin: 0 0 10px;
+}
+
+/* change the size of the legend points */
+.legend div span {
+border-radius: 50%;
+display: inline-block;
+height: 20px;
+margin-right: 7px;
+width: 20px;
 }
