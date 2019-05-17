@@ -106,8 +106,7 @@ map.on('style.load', function() {
     source: 'highlight-feature',
     paint: {
       'circle-radius': 5,
-      'circle-outline': 5,
-      'circle-opacity': 0.9,
+      'circle-opacity': 1,
       'circle-color': 'black',
     }
   });
@@ -125,7 +124,7 @@ map.on('style.load', function() {
 
       map.getCanvas().style.cursor = 'pointer'; // make the cursor a pointer
       var stationDescription = // use jquery to display the citibike stats on the sidebar
-        $('#station_id').text(station.properties.station_id);
+      $('#station_id').text(station.properties.station_id);
       $('#station_name').text(station.properties.station_name);
       $('#t_rides').text(station.properties.t_rides);
       $('#d_rides').text(station.properties.d_rides);
@@ -143,7 +142,6 @@ map.on('style.load', function() {
     }
   })
 })
-
 
 
 // "Find Out More" Pop Up Box
